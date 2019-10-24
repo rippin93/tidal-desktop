@@ -4,7 +4,7 @@
   "description": "Cross-platform electron app for the Tidal Web Interface",
   "main": "main.js",
   "scripts": {
-    "build": "node main.js",
+    "build": "ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/v node main.js",
     "test": "jshint main.js && jshint custom.js && node main.js"
   },
   "repository": {
