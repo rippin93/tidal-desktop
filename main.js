@@ -21,7 +21,7 @@ var options = {
     clearCache: false,
     tray: true,
     verbose: true,
-    electronVersion: "5.0.11-wvvmp",
+    electronVersion: "6.1.0-wvvmp",
     inject: ["./custom.js"],
     globalShortcuts: "shortcuts.json",
 };
