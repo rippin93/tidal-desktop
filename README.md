@@ -1,4 +1,4 @@
-# TIDAL for Linux [![Build Status](https://travis-ci.org/valknight/tidal-desktop.svg?branch=master)](https://travis-ci.org/valknight/tidal-desktop)
+# TIDAL for Linux [![Build Status](https://travis-ci.org/rippin93/tidal-desktop.svg?branch=master)](https://travis-ci.org/rippin93/tidal-desktop)
 
 ![Screenshot](https://i.imgur.com/jbOdW8a.png)
 
@@ -15,7 +15,7 @@ This is a wrapper for TIDAL's web app, using Nativfier, which injects custom cod
 ## Installation
 
 ### From binary
-[![Download link](https://img.shields.io/badge/Github-Download-blue.svg?style=for-the-badge&logo=github)](https://github.com/valknight/tidal-desktop/releases/latest)
+[![Download link](https://img.shields.io/badge/Github-Download-blue.svg?style=for-the-badge&logo=github)](https://github.com/rippin93/tidal-desktop/releases/latest)
 
 Click the above tag, or go to the releases tab, and download the latest `tar.xz` file. Extract it, run `chmod +x tidal`, and then you can run `tidal`.
 

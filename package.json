@@ -5,6 +5,8 @@
   "main": "main.js",
   "scripts": {
     "build": "ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/v node main.js",
+    "clean": "rm -rf build",
+    "deploy": "sudo rm -rf ~/.local/share/TIDAL-linux-x64 && mkdir -p ~/.local/share && cp -R build/TIDAL-linux-x64 ~/.local/share && sudo chown root:root ~/.local/share/TIDAL-linux-x64/chrome-sandbox && sudo chmod 4755 ~/.local/share/TIDAL-linux-x64/chrome-sandbox",
     "test": "jshint main.js && jshint custom.js && node main.js"
   },
   "repository": {
