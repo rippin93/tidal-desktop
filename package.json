@@ -1,10 +1,10 @@
 {
   "name": "tidal-linux",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Cross-platform electron app for the Tidal Web Interface",
   "main": "main.js",
   "scripts": {
-    "build": "ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/v node main.js",
+    "build": "ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/ node main.js",
     "clean": "rm -rf build",
     "deploy": "sudo rm -rf ~/.local/share/TIDAL-linux-x64 && mkdir -p ~/.local/share && cp -R build/TIDAL-linux-x64 ~/.local/share && sudo chown root:root ~/.local/share/TIDAL-linux-x64/chrome-sandbox && sudo chmod 4755 ~/.local/share/TIDAL-linux-x64/chrome-sandbox",
     "test": "jshint main.js && jshint custom.js && node main.js"
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/valknight/tidal-desktop#readme",
   "dependencies": {
-    "colors": "^1.3.3",
-    "jshint": "^2.10.1",
-    "nativefier": "^7.6.11"
+    "colors": "^1.4.0",
+    "jshint": "^2.12.0",
+    "nativefier": "git+ssh://git@github.com:rippin93/nativefier.git#master"
   }
 }
