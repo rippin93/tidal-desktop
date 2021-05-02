@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=$HOME/.local/share/TIDAL-linux-x64/TIDAL %u
+Version=1.0
+Type=Application
+Categories=Multimedia,Audio,Music
+Name=TIDAL
+Terminal=false
+StartupNotify=false

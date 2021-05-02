@@ -21,14 +21,14 @@ function filterButtons(dataTestTag, method) {
 }
 
 function previousMedia() {
-  if (window.lastKeyLast === undefined || !(Date.now() - window.lastKeyLast) <= 200) {
+  if (window.lastKeyLast === undefined || Date.now() - window.lastKeyLast > 200) {
     filterButtons("previous", "click"); // filterButtons returns a dom object of the button we want to click
     window.lastKeyLast = Date.now();
   }
 }
 
 function nextMedia() {
-  if (window.nextKeyLast === undefined || !(Date.now() - window.nextKeyLast) <= 200) {
+  if (window.nextKeyLast === undefined || Date.now() - window.nextKeyLast > 200) {
     filterButtons("next", "click");
     window.nextKeyLast = Date.now();
   }
@@ -40,7 +40,7 @@ function isPlaying() {
 }
 
 function pauseMedia() {
-  if (window.pauseKeyLast === undefined || !(Date.now() - window.pauseKeyLast) <= 200) {
+  if (window.pauseKeyLast === undefined || Date.now() - window.pauseKeyLast > 200) {
     log("MusicPaused");
     document.querySelectorAll("[class^=playbackToggle]")[0].click(); // the pause button is weird, hence the custom filter here
     window.pauseKeyLast = Date.now();
@@ -90,7 +90,7 @@ function getMediaInformation(callback) {
     // this happens if for some reason the footer isn't present
     if (typeof callback !== 'function') callback = getMediaInformation;
     setTimeout(function() {
-      callback()
+      callback();
     }, 1000);
     return toReturn;
   }

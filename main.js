@@ -1,9 +1,9 @@
-var nativefier = require('nativefier').default;
-var fs = require('fs');
-var colors=require('colors');
-// we use nativefier, and just inject code, because that's all we need really
+const nativefier = require('nativefier').default;
+const fs = require('fs');
+const colors = require('colors/safe');
 
-var options = {
+// we use nativefier, and just inject code, because that's all we need really
+const options = {
     name: 'TIDAL',
     targetUrl: 'https://listen.tidal.com', // required
     out: 'build/',
@@ -21,24 +21,25 @@ var options = {
     clearCache: false,
     tray: true,
     verbose: true,
-    electronVersion: "12.0.5-wvvmp",
+    electronVersion: "12.0.6-wvvmp",
     inject: ["./custom.js"],
     globalShortcuts: "shortcuts.json",
 };
 
 nativefier(options, function(error, appPath) {
     if (error) {
-        console.log(error.red);
+        console.log(colors.red(error));
         return;
     }
+
     // we now need to ensure that nativefier.json is set right (sometimes the name option doesn't pass correctly)
-    var rawdata = fs.readFileSync(appPath+'/resources/app/nativefier.json');
-    var packageData = JSON.parse(rawdata);
+    const rawData = fs.readFileSync(appPath+'/resources/app/nativefier.json').toString();
+    const packageData = JSON.parse(rawData);
     packageData.name = "TIDAL";
     // parts of our README ask people to change this file, so indenting it is polite
-    var to_write = JSON.stringify(packageData, null, 4);
-    fs.writeFile(appPath+'/resources/app/nativefier.json', to_write, function(error) {
+    const data = JSON.stringify(packageData, null, 4);
+    fs.writeFile(appPath+'/resources/app/nativefier.json', data, function(error) {
         if(error) throw error;
     });
-    console.log(("TIDAL is ready to start. cd to \""+appPath+"\", and run ./tidal").bold.green);
+    console.log(colors.bold(colors.green('TIDAL is ready to start. cd to "'+appPath+'", and run ./tidal')));
 });
