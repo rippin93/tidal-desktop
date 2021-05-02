@@ -1,4 +1,4 @@
-# TIDAL for Linux [![Build Status](https://travis-ci.org/rippin93/tidal-desktop.svg?branch=master)](https://travis-ci.org/rippin93/tidal-desktop)
+# TIDAL for Linux [![Build Status](https://travis-ci.com/rippin93/tidal-desktop.svg?branch=master)](https://travis-ci.com/rippin93/tidal-desktop)
 
 ![Screenshot](https://i.imgur.com/jbOdW8a.png)
 
@@ -28,7 +28,7 @@ Click the above tag, or go to the releases tab, and download the latest `tar.xz`
 
 #### Procedure
 
-> This has been tested on Ubuntu 18.04.2 LTS AMD64- your system may vary
+> This has been tested on Arch Linux (Rolling Release) your system may vary
 
 1. Clone / download this repository
 2. Open up a terminal in said directory
