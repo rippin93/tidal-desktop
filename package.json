@@ -3,11 +3,12 @@
   "version": "0.2.0",
   "description": "Cross-platform electron app for the Tidal Web Interface",
   "main": "main.js",
+  "type": "module",
   "scripts": {
-    "build": "ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/ node main.js",
+    "build": "node main.js",
     "clean": "rm -rf build",
     "deploy": "./deploy.sh",
-    "test": "jshint main.js && jshint custom.js && ELECTRON_MIRROR=https://github.com/castlabs/electron-releases/releases/download/ node main.js"
+    "test": "jshint main.js && jshint custom.js && node main.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,6 @@
   "dependencies": {
     "colors": "^1.4.0",
     "jshint": "^2.12.0",
-    "nativefier": "git+ssh://git@github.com:rippin93/nativefier.git#master"
+    "nativefier": "^43.1.3"
   }
 }
