@@ -23,6 +23,6 @@
   "dependencies": {
     "colors": "^1.4.0",
     "jshint": "^2.12.0",
-    "nativefier": "^43.1.3"
+    "nativefier": "^44.0.4"
   }
 }
