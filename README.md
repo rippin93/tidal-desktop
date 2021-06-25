@@ -17,7 +17,15 @@ This is a wrapper for TIDAL's web app, using Nativfier, which injects custom cod
 ### From binary
 [![Download link](https://img.shields.io/badge/Github-Download-blue.svg?style=for-the-badge&logo=github)](https://github.com/rippin93/tidal-desktop/releases/latest)
 
-Click the above tag, or go to the releases tab, and download the latest `tar.xz` file. Extract it, run `chmod +x tidal`, and then you can run `tidal`.
+Click the above tag, or go to the releases tab, and download the latest `tar.xz` file.\
+Then run
+```
+tar xf tidal_desktop-vX.Y.Z.tar.xz
+chown -R 1000:1000 release
+cd release
+./deploy.sh
+```
+Now you should be able to start TIDAL as any other desktop application.
 
 ### From source
 
