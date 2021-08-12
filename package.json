@@ -1,6 +1,6 @@
 {
   "name": "tidal-linux",
-  "version": "0.2.0",
+  "version": "1.0.1",
   "description": "Cross-platform electron app for the Tidal Web Interface",
   "main": "main.js",
   "type": "module",
@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/rippin93/tidal-desktop.git"
   },
-  "author": "Val Knight",
+  "author": "Daniel Fuchs",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rippin93/tidal-desktop/issues"
@@ -23,6 +23,6 @@
   "dependencies": {
     "colors": "^1.4.0",
     "jshint": "^2.12.0",
-    "nativefier": "^44.0.4"
+    "nativefier": "^45.0.0"
   }
 }
