@@ -20,11 +20,19 @@ This is a wrapper for TIDAL's web app, using Nativfier, which injects custom cod
 Click the above tag, or go to the releases tab, and download the latest `tar.xz` file.\
 Then run
 ```
-tar xf tidal_desktop-vX.Y.Z.tar.xz
+tar xf tidal_desktop-gnome-vX.Y.Z.tar.xz
+cd tidal_desktop-gnome-v1.0.0
 chown -R 1000:1000 release
+gedit release/build/TIDAL-linux-x64/tidal.desktop
+```
+This will open a text editor. Replace YOUR_USER_HERE with your username, save and close the file.
+Then run
+```
 cd release
 ./deploy.sh
 ```
+You might need to restart your computer if TIDAL doesn't show up.
+
 Now you should be able to start TIDAL as any other desktop application.
 
 ### From source
