@@ -1,6 +1,6 @@
 {
   "name": "tidal-linux",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cross-platform electron app for the Tidal Web Interface",
   "main": "main.js",
   "type": "module",
@@ -22,7 +22,7 @@
   "homepage": "https://github.com/rippin93/tidal-desktop#readme",
   "dependencies": {
     "colors": "^1.4.0",
-    "jshint": "^2.13.1",
-    "nativefier": "^45.0.4"
+    "jshint": "^2.13.3",
+    "nativefier": "^46.0.4"
   }
 }

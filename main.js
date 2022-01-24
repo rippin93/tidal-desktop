@@ -19,7 +19,7 @@ const options = {
   clearCache: false,
   tray: true,
   verbose: true,
-  electronVersion: "15.3.0",
+  electronVersion: "15.3.5",
   inject: ["./custom.js"],
   globalShortcuts: "shortcuts.json",
   widevine: true,
