@@ -23,7 +23,7 @@ Then run
 tar xf tidal_desktop-gnome-vX.Y.Z.tar.xz
 cd tidal_desktop-gnome-vX.Y.Z
 chown -R 1000:1000 release
-gedit release/build/TIDAL-linux-x64/tidal.desktop
+gedit release/tidal.desktop
 ```
 This will open a text editor. Replace YOUR_USER_HERE with your username, save and close the file.
 Then run
