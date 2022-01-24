@@ -1,6 +1,6 @@
 {
   "name": "tidal-linux",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cross-platform electron app for the Tidal Web Interface",
   "main": "main.js",
   "type": "module",
