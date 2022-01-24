@@ -31,7 +31,6 @@ Then run
 cd release
 ./deploy.sh
 ```
-You might need to restart your computer if TIDAL doesn't show up.
 
 Now you should be able to start TIDAL as any other desktop application.
 
