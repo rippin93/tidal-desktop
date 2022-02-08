@@ -1,5 +1,4 @@
-# TIDAL for Linux [![Build Status](https://travis-ci.com/rippin93/tidal-desktop.svg?branch=master)](https://travis-ci.com/rippin93/tidal-desktop)
-
+# TIDAL for Linux
 ![Screenshot](https://i.imgur.com/jbOdW8a.png)
 
 ## What is this?
