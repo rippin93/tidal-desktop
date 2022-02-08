@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=/home/dfuchs/.local/share/TIDAL-linux-x64/TIDAL %u
+Exec=<HOME>/.local/share/TIDAL-linux-x64/TIDAL %u
 Version=1.0
 Type=Application
 Categories=Multimedia,Audio,Music
