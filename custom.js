@@ -40,8 +40,7 @@ function nextMedia() {
 }
 
 function isPlaying() {
-  let pause = document.querySelectorAll("[class^=playbackToggle]")[0]; // the data tag of the play/pause button is only pause *if* the song is playing
-  return pause.attributes['data-test'].value === "pause";
+  return !!document.querySelector('[data-test="pause"]');
 }
 
 function pauseMedia() {
@@ -72,26 +71,25 @@ function keyDownTextField(e) {
 function getMediaInformation(callback) {
   // we have two footers, both are the same, just the first is the one in the default view
   let toReturn = { "title" : "Unknown", "artist" : "Unknown", "playing_from" : "Unknown" };
-  let footer = document.querySelectorAll("[class^=footerPlayer]")[0];
-  let mediaInformationDiv;
+  let footer = document.getElementById("footerPlayer") || document.querySelector("[class^=footerPlayer]");
   try {
-    mediaInformationDiv = footer.querySelectorAll("[class^=mediaInformation]")[0];
-
-    // annoyingly, TIDAL don't give us any class for the title, so we just have to iterate over ourselves
-    for (let i = 0; i < mediaInformationDiv.childNodes.length; i++) {
-      if (mediaInformationDiv.childNodes[i].attributes['data-test'] !== undefined) {
-        if (mediaInformationDiv.childNodes[i].attributes['data-test'].value === "footer-track-title") {
-          // this means current child has the track title
-          toReturn.title = mediaInformationDiv.childNodes[i].textContent;
-        }
-      }
+    if (!footer) {
+      return toReturn;
     }
 
-    toReturn.artist = mediaInformationDiv.querySelectorAll("[class^=mediaArtists]")[0].textContent;
-    // this chaos is because TIDAL handily split the player into "Playing from" and the actual playlist
-    toReturn.playing_from = mediaInformationDiv.childNodes[2].querySelectorAll("[class^=text]")[0].textContent;
+    const titleElement = footer.querySelector('[data-test*="track-title"]');
+    const artistElement = footer.querySelector('[data-test*="title-artist"]');
+
+    if (!titleElement || !artistElement) {
+      return toReturn;
+    }
+
+    toReturn.title = titleElement.textContent;
+    toReturn.artist = artistElement.textContent;
+
     return toReturn;
   } catch (err) {
+    log(err);
     // this happens if for some reason the footer isn't present
     if (typeof callback !== 'function') callback = getMediaInformation;
     setTimeout(function() {
