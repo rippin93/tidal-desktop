@@ -1,7 +1,12 @@
+const console = require('console');
+
+const logger = new console.Console(process.stdout, process.stderr);
+
 let options = { "enable_notifications" : true };
 
-function log(data) {
-  document.getElementById("log").innerHTML = document.getElementById("log").innerHTML + "\n" + data;
+function log(...data) {
+  logger.log(...data);
+  document.getElementById("log").innerHTML = document.getElementById("log").innerHTML + "\n" + data.join("\n");
 }
 
 function filterButtons(dataTestTag, method) {
