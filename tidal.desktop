@@ -6,3 +6,4 @@ Categories=Multimedia,Audio,Music
 Name=TIDAL
 Terminal=false
 StartupNotify=false
+Icon=<HOME>/.local/share/TIDAL-linux-x64/resources/app/icon.png
