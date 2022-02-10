@@ -1,8 +1,13 @@
 [Desktop Entry]
+Encoding=UTF-8
+Name=Tidal
+GenericName=Music Player
+GenericName[fr]=Lecteur de musique
+Comment=Listen Musique
+Comment[fr]=Ecouter de la musique
 Exec=<HOME>/.local/share/TIDAL-linux-x64/TIDAL %u
-Version=1.0
-Type=Application
-Categories=Multimedia,Audio,Music
-Name=TIDAL
-Terminal=false
 StartupNotify=false
+Terminal=false
+Icon=<HOME>/.local/share/TIDAL-linux-x64/resources/app/icon.png
+Type=Application
+Categories=Utility;Application;
