@@ -15,6 +15,6 @@ cp -R build/TIDAL-linux-x64 "$home_dir/.local/share"
 sudo chown root:root "$home_dir/.local/share/TIDAL-linux-x64/chrome-sandbox"
 sudo chmod 4755 "$home_dir/.local/share/TIDAL-linux-x64/chrome-sandbox"
 mkdir -p "$home_dir/.local/share/applications"
-sed -i "s:<HOME>:$home_dir:g" tidal.desktop
 cp tidal.desktop "$home_dir/.local/share/applications"
+sed -i "s:<HOME>:$home_dir:g" "$home_dir/.local/share/applications/tidal.desktop"
 
