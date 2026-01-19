@@ -1,4 +1,4 @@
-# TIDAL for Linux
+# TIDAL for Linux (abandoned, take over if you want to keep using it, I just use the normal webapp nowadays, cause it works 🤷‍♂️)
 ![Screenshot](https://i.imgur.com/jbOdW8a.png)
 
 ## What is this?
